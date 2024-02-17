@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+ source "https://rubygems.org"
 
 ruby "3.3.0"
 
@@ -76,3 +76,5 @@ gem "font-awesome-sass", "~> 6.5"
 gem "stripe", "~> 10.9"
 
 gem "pagy", "~> 7.0"
+
+gem "aws-sdk-s3", require: false
