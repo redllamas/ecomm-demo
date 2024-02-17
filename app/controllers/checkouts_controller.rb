@@ -1,6 +1,6 @@
 class CheckoutsController < ApplicationController
   def create
-    stripe_secret_key = Rails.application.credentials.dig(:stripe, :secret_key)
+    stripe_secret_key = Rails.application.credentials.dig(:stripe, :secret_test_key)
     Stripe.api_key = stripe_secret_key
     cart = params[:cart]
     line_items = cart.map do |item|
@@ -33,7 +33,7 @@ class CheckoutsController < ApplicationController
       success_url: "http://localhost:3000/success",
       cancel_url: "http://localhost:3000/cancel",
       shipping_address_collection: {
-        allowed_countries: ['US', 'CA']
+        allowed_countries: ['US', 'CA', 'JP']
       }
     )
 
